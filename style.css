@@ -1,0 +1,548 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: url('/photos/kicksleep.png'), auto;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+ 
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color:#E80074;
+}
+
+.home-page button {
+  transform: translateY(-50%);
+}
+
+/* Logo styling */
+.logo {
+  font-family: 'Arial Narrow', sans-serif;
+  font-size: 5rem;
+  color: rgb(255, 255, 255);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+  padding: 16px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Dropdown Content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0; /* Start van boven */
+  width: 100vw; /* Volledige breedte van het scherm */
+  height: 100vh; /* Volledige hoogte van het scherm */
+  background-color: white; /* Achtergrond van het menu */
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Zet items onder elkaar */
+  z-index: 1;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%); /* Begin buiten beeld */
+}
+
+.dropdown-content.show {
+  transform: translateX(0); /* Toon het menu */
+}
+
+.dropdown-content a {
+  color: #E80074;
+  padding: 12px 0;
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.dropdown-content a:hover {
+  background-color:#E80074;
+  color: rgb(0, 0, 0);
+}
+
+/* Show the dropdown when active */
+.dropdown-content.show {
+ 
+  transform: translateX(0);
+}
+
+header {
+  background-color: #E80074;
+}
+footer {
+  background-color: #E80074;
+}
+
+
+/*workpagina */
+
+.work-page header {
+  display: flex;
+  justify-content: space-between; /* Maakt ruimte tussen logo en menu */
+  align-items: center; /* Centreert de items verticaal */
+ 
+  padding: 10px 20px;
+
+}
+
+
+
+.work-page nav {
+  position: absolute; /* Zorgt ervoor dat het menu linksboven verschijnt */
+  top: 10px; /* Ruimte van boven */
+  left: 20px; /* Ruimte van links */
+}
+
+.work-page .dropdown-content {
+  display: none; /* Verberg dropdown inhoud in eerste instantie */
+}
+
+.work-page .dropdown:hover .dropdown-content {
+  display: block; /* Toon dropdown bij hover */
+}
+
+.work-page main section {
+  display: flex; /* Zet de afbeeldingen naast elkaar */
+  gap: 20px; /* Voeg ruimte toe tussen de afbeeldingen */
+  justify-content: center; /* Centreer de afbeeldingen binnen de sectie */
+  margin-bottom: 20px; /* Voeg ruimte toe onder elke sectie */
+}
+
+.work-page main section:first-of-type {
+  margin-top: 22em;
+}
+
+.work-page h1 {
+  color: white;
+  font-size: 100px;
+}
+
+.work-page main section img {
+  width: 400px; /* Stel de breedte van elke afbeelding in */
+  height: 300px; /* Zorg ervoor dat de afbeeldingen hun verhoudingen behouden */
+  
+}
+
+
+
+.work-page footer {
+  
+  padding: 10px 0;
+  
+}
+
+/* aboutpagina*/
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-page header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+ 
+  padding: 10px 20px;
+}
+
+
+
+#about {
+  max-width: 700px; 
+ 
+ 
+}
+
+#about h2 {
+  text-align: left; 
+  color: #ffffff;
+}
+
+#about p {
+  text-align: justify; 
+  line-height: 1.6; 
+}
+
+.about-page nav {
+  position: absolute; 
+  top: 10px; 
+  left: 20px; 
+}
+
+.about-page main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.about-page section {
+  padding: 1em;
+ }
+
+.about-page p {
+text-align: left;
+color: #ffffff;
+} 
+
+.about-page img {
+  width: 400px;
+  border-radius: 1em;
+
+  
+}
+
+.about-page .dropdown-content {
+  display: none; /* Verberg dropdown inhoud in eerste instantie */
+}
+
+.about-page .dropdown:hover .dropdown-content {
+  display: block; /* Toon dropdown bij hover */
+}
+
+.about-page footer {
+  
+  padding: 10px 0;
+  
+}
+
+/* ghostlygrief */
+
+.gg nav {
+  position: absolute; 
+  top: 10px; 
+  left: 20px; 
+}
+
+
+.gg section {
+  margin-bottom: 11em;
+  margin-top: -10em;
+}
+
+
+
+.gg h1 {
+  color: white;
+  font-size: 100px;
+}
+
+.carousel {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  border-radius: 10px;
+ 
+}
+
+
+.gg img {
+width: 800px;
+height: 600px;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+#prev {
+  left: 10px;
+}
+
+#next {
+  right: 10px;
+}
+
+button.hidden {
+  display: none;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* patrick scythe*/
+.patrick header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+ 
+  padding: 10px 20px;
+
+}
+
+.patrick nav {
+  position: absolute; 
+  top: 10px; 
+  left: 20px; 
+}
+.patrick .dropdown-content {
+  display: none; 
+}
+
+.patrick .dropdown:hover .dropdown-content {
+  display: block; 
+}
+
+
+
+.patrick main section:first-of-type {
+  margin-top:8em;
+  margin-bottom: 2em;
+  
+}
+
+.patrick h1 {
+  color: white;
+  font-size: 100px;
+}
+
+/* kyra introduction*/
+.kyra header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+ 
+  padding: 10px 20px;
+
+}
+
+.kyra nav {
+  position: absolute; 
+  top: 10px; 
+  left: 20px; 
+}
+
+.kyra .dropdown-content {
+  display: none; 
+}
+
+.kyra .dropdown:hover .dropdown-content {
+  display: block; 
+}
+
+.kyra h1 {
+  color: white;
+  font-size: 100px;
+}
+
+.kyra section:first-of-type {
+  margin-top: -1em;
+  margin-bottom: 2em;
+}
+
+/* klmxrcoe */
+
+.klm header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.klm nav {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.klm .dropdown-content {
+  display: none;
+}
+
+.klm .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.klm h1 {
+  color: white;
+  font-size: 100px;
+  margin-top: -3.7em;
+}
+
+.klm section:nth-of-type(2) {
+  margin-top: 11em;
+}
+
+/* Styling for the link as a button */
+.klm .design-button {
+  display: inline-block;
+  padding: 1em 2em;
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  position: relative;
+  padding: 2em;
+}
+
+.klm .design-button:hover {
+  background-color: #333;
+}
+
+/* vagabond*/
+.vagabond header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+ 
+  padding: 10px 20px;
+
+}
+
+.vagabond nav {
+  position: absolute; 
+  top: 10px; 
+  left: 20px; 
+}
+
+.vagabond .dropdown-content {
+  display: none; 
+}
+
+.vagabond .dropdown:hover .dropdown-content {
+  display: block; 
+}
+
+.vagabond h1 {
+  color: white;
+  font-size: 100px;
+}
+
+.vagabond section:first-of-type {
+  margin-top: -1em;
+  margin-bottom: 2em;
+}
+
+/* contact */ 
+
+.contact {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.contact header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+ 
+  padding: 10px 20px;
+
+}
+
+.contact nav {
+  position: absolute; 
+  top: 10px; 
+  left: 20px; 
+}
+
+.contact .dropdown-content {
+  display: none; 
+}
+
+.contact .dropdown:hover .dropdown-content {
+  display: block; 
+}
+
+.contact h1 {
+  color: #ffffff;
+  font-size: 100px;
+  margin-top: -2.8em;
+  margin-bottom: 1em;
+}
+
+.contact form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact label {
+  font-weight: bold;
+  color: white;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.contact textarea {
+  resize: vertical;
+}
+
+.contact main button {
+  padding: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+
+  font-size: 16px;
+  margin-top: 13em;
+  margin-left: 10em;
+}
+
+.contact button:hover {
+  background-color: #555;
+}

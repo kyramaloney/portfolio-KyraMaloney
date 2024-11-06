@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KyraMaloney portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="gg">
+
+    <header>
+      
+          <nav class="top-nav">
+            <div class="dropdown">
+              <button class="dropbtn">Menu</button>
+              <div id="dropdown-content" class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="work.html">Work</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+      </header>
+  
+  <main>
+    <section>
+      <h1>Ghostly Grief</h1>
+    </section>
+  <div class="carousel">
+    <img id="image" src="gg1.png" alt="Image 1">
+
+  </div>
+
+  <button id="prev" class="hidden" onclick="showPrevImage()">Prev</button>
+<button id="next" onclick="showNextImage()">Next</button>
+</main>
+<script>
+let currentIndex = 0;
+const images = [
+  "gg1.png",
+  "gg2.png",
+  "gg3.png",
+  "gg4.png",
+  "gg5.png",
+  "gg6.png",
+  "gg7.png",
+  "gg8.png",
+  "gg9.png"
+];
+
+function updateImage() {
+  const imageElement = document.getElementById('image');
+  imageElement.src = images[currentIndex];
+
+  // Logica om knoppen te tonen/verbergen
+  const prevButton = document.getElementById('prev');
+  const nextButton = document.getElementById('next');
+  prevButton.classList.toggle('hidden', currentIndex === 0);
+  nextButton.classList.toggle('hidden', currentIndex === images.length - 1);
+}
+
+function showNextImage() {
+  if (currentIndex < images.length - 1) {
+    currentIndex++;
+    updateImage();
+  }
+}
+
+function showPrevImage() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateImage();
+  }
+}
+
+
+updateImage();
+</script>
+
+  <script src="script.js"></script>  
+  
+
+</body>
+</html>
